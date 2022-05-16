@@ -105,15 +105,15 @@ error_detect_depends() {
 
 # Cài đặt trước cài đặt
 pre_install_docker_compose() {
-  echo -e "  [1] shopvpn.net"
-  echo -e "  [2] shopvpn.net"
+  echo -e "  [1] onetvpn.xyz"
+  echo -e "  [2] onetvpn.xyz"
   read -p "  Web đang sử dụng:" api_host
   if [ "$api_host" == "1" ]; then
-    api_host="http://shopvpn.net/"
+    api_host="http://onetvpn.xyz/"
   elif [ "$api_host" == "2" ]; then
-    api_host="http://shopvpn.net/"
+    api_host="http://onetvpn.xyz/"
   else 
-    api_host="http://https://shopvpn.net/"
+    api_host="http://https://onetvpn.xyz/"
   fi
 
   echo "--------------------------------"
@@ -146,7 +146,7 @@ config_docker() {
 version: '3'
 services: 
   xrayr: 
-    image: aikocute/aikoxrayr:latest
+    image: misakano7545/xrayr:latest
     volumes:
       - ./config.yml:/etc/XrayR/config.yml # thư mục cấu hình bản đồ
       - ./dns.json:/etc/XrayR/dns.json 
@@ -181,8 +181,8 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "http://shopvpn.net/"
-      ApiKey: "adminquangtien1234@gmail.com"
+      ApiHost: "http://onetvpn.xyz.xyz/"
+      ApiKey: "112233445566778899"
       NodeID: 41
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
